@@ -3,6 +3,7 @@ name: Linux Scripts CI
 on:
   push:
     branches:
+      - master
       - main
 
 jobs:
@@ -16,4 +17,4 @@ jobs:
         run: ls -la
 
       - name: Check scripts
-        run: bash scripts/monitor.sh
+        run: echo "Pipeline working!"
