@@ -1,0 +1,19 @@
+name: Linux Scripts CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: List files
+        run: ls -la
+
+      - name: Check scripts
+        run: bash scripts/monitor.sh
